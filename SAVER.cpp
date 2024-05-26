@@ -31,6 +31,7 @@ void SaveALL() { //保存系统
 	system("ipconfig /all >./SYSTEMSAVE/ipconfig.txt ");
 	system("set >./SYSTEMSAVE/set.txt ");
 	system("wmic useraccount get name >./SYSTEMSAVE/user.txt");
+	system("wmic sounddev list full >./SYSTEMSAVE/sounddev.txt");
 }
 
  void GetCPUmhz( double *GetCPUSPEED) {  //CPU频率测试
