@@ -1,0 +1,4 @@
+JS1
+./Saver/js/JS1.js
+text/javascrip
+这是一个测试的js类型

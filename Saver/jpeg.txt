@@ -1,0 +1,4 @@
+A1
+./Saver/jpeg/A1.jpg
+image/jpeg
+NULL

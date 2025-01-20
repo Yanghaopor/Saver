@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saver1.2</title>
+    <link rel="stylesheet" href="./css/css.css">
+</head>
+<body>
+    <!--用户引导-->
+    <script src="./js/Help.js"></script>
+        <!--标题-->
+      <center><span style="font-size: 2vw;">Welcom_Saver1.2</span></center><br>
+      <hr style=" margin-left: -1vw; margin-top: -0.5vw;">
+      <!--选择栏-->
+      <div class="XZK"></div>
+    
+      <!--内存占用-->
+      <div id="reme">
+            <div id="reme_L"></div>
+      </div>
+      <span style="position: absolute; z-index: 90; margin-top: -72vh; margin-left: 2%; font-size: 1.5vw;" id="RemData"></span>
+      <span style="position: absolute; z-index: 90; margin-top: -69vh; margin-left: 2%; font-size: 1.5vw;" id="RemMax"></span>
+      <script src="./js/cpuget.js"></script>
+      
+      <!--CPU占用-->
+      <div id="cpuuser">
+        <div id="cpuuser_L"></div>
+      </div>
+      <span style="position: absolute; z-index: 90; margin-top: -59vh; margin-left: 2%; font-size: 1.5vw;" id="CpuUserd"></span>
+    <!--CPU频率-->
+    <div id="cpuMhz">
+        <div id="cpuMhz_L"></div>
+      </div>
+      <span style="position: absolute; z-index: 90; margin-top: -49vh; margin-left: 2%; font-size: 1.5vw;" id="CpuMhzf"></span>
+      <span style="position: absolute; z-index: 90; margin-top: -46vh; margin-left: 2%; font-size: 1.5vw;" id="Cpuname"></span>
+      <script src="./js/anyTake.js"></script>
+      <img src="./Saver/jpeg/glb.gif" alt="" style="position: absolute; margin-top: -40vh;">
+      <span style="position: absolute; z-index: 90; margin-top: -82vh; margin-left: 42%; font-size: 1.5vw;" id="text">
+          Saver1.2是一个测试版本,这个版本的图形API是由我写的另一个项目<a href="https://github.com/Yanghaopor/ITSQL_Backend_framework">ITSQL框架写的</a>
+          不过是用我还没发布的版本写的,也算是预告，这个版本增加了于窗口句柄的控制，大白话就是可以用它直接写桌面应用了，不过桌面应用无法跨平台。这个版本
+          的Saver是一个验证版本，所以没什么其它功能。<br>开发者:Gura/看看过程<br>网站支持:小发
+      </span>
+      <!--检测脚本-->
+   <!-- <script>
+        setInterval(function(){
+        // 创建XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+        // 配置请求的类型（GET），URL，以及是否异步
+        xhr.open('GET', 'http://127.0.0.1:80?', true);
+        // 发送请求
+        xhr.send();
+        }, 100);
+    </script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://live2d.xiaofa520.cn/live2d-widget/waifu.css"/>
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="https://live2d.xiaofa520.cn/live2d-widget/jquery.min.js"></script>
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <script src="https://live2d.xiaofa520.cn/live2d-widget/jquery-ui.min.js"></script>
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <script src="https://live2d.xiaofa520.cn/live2d-widget/waifu-tips.js"></script>
+    <script src="https://live2d.xiaofa520.cn/live2d-widget/live2d.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        // 后端接口
+        live2d_settings['modelAPI'] = '不需要啦（x';                 // 自建 API 修改这里
+        live2d_settings['hitokotoAPI'] = 'hitokoto.cn';                  // 一言 API，可选 'lwl12.com', 'hitokoto.cn', 'jinrishici.com'(古诗词)
+        // 默认模型
+        live2d_settings['modelId']= 0;            // 默认模型 ID，可在 F12 控制台找到
+        live2d_settings['modelTexturesId']= 53;           // 默认材质 ID，可在 F12 控制台找到
+        // 工具栏设置
+        live2d_settings['showToolMenu']         = true;         // 显示 工具栏          ，可选 true(真), false(假)
+        live2d_settings['canCloseLive2d']       = true;         // 显示 关闭看板娘  按钮，可选 true(真), false(假)
+        live2d_settings['canSwitchModel']       = true;         // 显示 模型切换    按钮，可选 true(真), false(假)
+        live2d_settings['canSwitchTextures']    = true;         // 显示 材质切换    按钮，可选 true(真), false(假)
+        live2d_settings['canSwitchHitokoto']    = true;         // 显示 一言切换    按钮，可选 true(真), false(假)
+        live2d_settings['canTakeScreenshot']    = true;         // 显示 看板娘截图  按钮，可选 true(真), false(假)
+        live2d_settings['canTurnToHomePage']    = true;         // 显示 返回首页    按钮，可选 true(真), false(假)
+        live2d_settings['canTurnToAboutPage']   = false;         // 显示 跳转关于页  按钮，可选 true(真), false(假)
+        // 模型切换模式
+        live2d_settings['modelStorage']         = true;         // 记录 ID (刷新后恢复)，可选 true(真), false(假)
+        live2d_settings['modelRandMode']        = 'switch';     // 模型切换，可选 'rand'(随机), 'switch'(顺序)
+        live2d_settings['modelTexturesRandMode']= 'rand';       // 材质切换，可选 'rand'(随机), 'switch'(顺序)
+        // 提示消息选项
+        live2d_settings['showHitokoto']         = true;         // 显示一言
+        live2d_settings['showF12Status']        = true;         // 显示加载状态
+        live2d_settings['showF12Message']       = false;        // 显示看板娘消息
+        live2d_settings['showF12OpenMsg']       = true;         // 显示控制台打开提示
+        live2d_settings['showCopyMessage']      = true;         // 显示 复制内容 提示
+        live2d_settings['showWelcomeMessage']   = true;         // 显示进入面页欢迎词
+        //看板娘样式设置
+        live2d_settings['waifuSize']= '280x250';    // 看板娘大小，例如 '280x250', '600x535'
+        live2d_settings['waifuTipsSize']= '250x70'; // 提示框大小，例如 '250x70', '570x150'
+        live2d_settings['waifuFontSize']= '14px'; // 提示框字体，例如 '12px', '30px'
+        live2d_settings['waifuToolFont']= '21px';  // 工具栏字体，例如 '14px', '36px'
+        live2d_settings['waifuToolLine']= '28px'; // 工具栏行高，例如 '20px', '36px'
+        live2d_settings['waifuToolTop']= '0px'  // 工具栏顶部边距，例如 '0px', '-60px'
+        live2d_settings['waifuMinWidth']= '768px';// 面页小于 指定宽度 隐藏看板娘，例如 'disable'(禁用), '768px'
+        live2d_settings['waifuEdgeSide']= 'right:10';// 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+        live2d_settings['waifuDraggable']= 'disable';// 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
+        live2d_settings['waifuDraggableRevert'] = true;// 松开鼠标还原拖拽位置，可选 true(真), false(假)
+        live2d_settings['homePageUrl']='http://bk.xiaofa520.cn'; // 主页地址，可选 'auto'(自动), '{URL 网址}'
+        live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件名，例如 'live2d.png'
+        /* 在 initModel 前添加 */
+        initModel("https://live2d.xiaofa520.cn/live2d-widget/waifu-tips.json")</script>
+</body>
+</html>

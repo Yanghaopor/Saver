@@ -1,0 +1,32 @@
+﻿  main.cpp
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\Nike\source\repos\Saver1.2\InTypeSendSQL.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“main.cpp”)
+  
+C:\Users\Nike\source\repos\Saver1.2\InTypeSendSQL.h(214,38): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+C:\Users\Nike\source\repos\Saver1.2\InTypeSendSQL.h(277,41): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+C:\Users\Nike\source\repos\Saver1.2\InTypeSendSQL.h(362,15): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  (编译源文件“main.cpp”)
+  
+C:\Users\Nike\source\repos\Saver1.2\stream.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“main.cpp”)
+  
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(87,77): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(87,62): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(87,45): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(87,29): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(156,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(157,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(163,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(164,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(170,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(171,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(178,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(179,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(188,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Nike\source\repos\Saver1.2\main.cpp(189,49): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  Saver1.2.vcxproj -> C:\Users\Nike\source\repos\Saver1.2\x64\Debug\Saver1.2.exe
